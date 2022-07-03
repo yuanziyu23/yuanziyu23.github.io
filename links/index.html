@@ -197,98 +197,165 @@
             <div class="main-content">
 
                 
-                    <div class="fade-in-down-animation">
-    <div class="page-template-container">
-        
-        
-        <div class="page-template-content markdown-body">
-            
-                <p>可留言申请友链</p>
+                    $friend-link-item-height = 82px;
+$friend-link-item-height-tablet = 68px;
+$friend-link-item-interval = 16px;
+$friend-link-item-border-radius = 6px;
 
-            
-        </div>
-        <div class="page-template-comments">
-            
-                <div class="comments-container">
-    <div id="comment-anchor"></div>
-    <div class="comment-area-title">
-        <i class="fas fa-comments">&nbsp;Comments</i>
-    </div>
-    
+.page-template-container {
 
-        
-            
-    <div class="valine-container">
-        <script data-pjax
-                src="//cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
-        <div id="vcomments"></div>
-        <script data-pjax>
-            function loadValine() {
-                new Valine({
-                    el: '#vcomments',
-                    appId: 'SVKVVTduJoj7mFHjzR5kEU8N-gzGzoHsz',
-                    appKey: 'U0sklLqr6u4EhIUxtqEY9fIz',
-                    meta: ['nick', 'mail', 'link'],
-                    avatar: 'wavatar',
-                    enableQQ: true,
-                    placeholder: '😜 尽情吐槽吧~',
-                    lang: 'en'.toLowerCase()
-                });
+  keep-container(false, 0, 0, 30px, 30px);
 
-                function getAuthor(language) {
-                    switch (language) {
-                        case 'en':
-                            return 'Author';
-                        case 'zh-CN':
-                            return '博主';
-                        default:
-                            return 'Master';
-                    }
+  .page-template-content {
+    color: var(--default-text-color);
+
+    h1, h2, h3, h4, h5, h6 {
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+    }
+  }
+
+
+  if (hexo-config('menu.Links')) {
+    .friends-link-container {
+
+      .friends-link-list {
+        position: relative;
+
+        .friends-link-item {
+          box-sizing: border-box;
+          position: relative;
+          float: left;
+          width: 50%;
+          cursor: pointer;
+          height: $friend-link-item-height;
+          padding-bottom: $friend-link-item-interval;
+
+          +keep-tablet() {
+            height: $friend-link-item-height-tablet;
+          }
+
+          &:nth-child(odd) {
+            padding-right: $friend-link-item-interval * 0.5;
+          }
+
+          &:nth-child(even) {
+            padding-left: $friend-link-item-interval * 0.5;
+          }
+
+          .content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            box-shadow: 1px 1px 2px var(--shadow-color);
+            border-radius: $friend-link-item-border-radius;
+            padding-left: $friend-link-item-height - $friend-link-item-interval;
+            box-sizing: border-box;
+
+
+            +keep-tablet() {
+              padding-left: $friend-link-item-height-tablet - $friend-link-item-interval;
+            }
+
+            &:hover {
+              box-shadow: 1px 1px 6px var(--shadow-color);
+
+              .info .name {
+                color: var(--primary-color);
+              }
+            }
+
+            .radius {
+              border-top-left-radius: $friend-link-item-border-radius;
+              border-bottom-left-radius: $friend-link-item-border-radius;
+            }
+
+            .avatar {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: $friend-link-item-height  - $friend-link-item-interval;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 2rem;
+              background: var(--second-background-color);
+              color: var(--second-text-color);
+
+
+              +keep-tablet() {
+                width: $friend-link-item-height-tablet  - $friend-link-item-interval;
+              }
+
+              img {
+                box-sizing: border-box;
+                position: relative;
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+
+            .info {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              box-sizing: border-box;
+              padding: 10px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-items: flex-start;
+
+              +keep-tablet() {
+                padding: 6px;
+              }
+
+              .name {
+                width: 100%;
+                height: 60%;
+                font-size: 1.28rem;
+                color: var(--second-text-color);
+
+                +keep-tablet() {
+                  font-size: 1.08rem;
                 }
+              }
 
-                // Add "Author" identify
-                const getValineDomTimer = setInterval(() => {
-                    const vcards = document.querySelectorAll('#vcomments .vcards .vcard');
-                    if (vcards.length > 0) {
-                        let author = 'EJyuan';
+              .description {
+                width: 100%;
+                height: 40%;
+                font-size: 1rem;
+                color: var(--third-text-color);
 
-                        if (author) {
-                            for (let vcard of vcards) {
-                                const vnick_dom = vcard.querySelector('.vhead .vnick');
-                                const vnick = vnick_dom.innerHTML;
-                                if (vnick === author) {
-                                    vnick_dom.innerHTML = `${vnick} <span class="author">${getAuthor(KEEP.hexo_config.language)}</span>`
-                                }
-                            }
-                        }
-                        clearInterval(getValineDomTimer);
-                    } else {
-                        clearInterval(getValineDomTimer);
-                    }
-                }, 2000);
+
+                +keep-tablet() {
+                  font-size: 0.98rem;
+                }
+              }
+
+              .ellipsis {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+
             }
+          }
 
-            if ('true') {
-                const loadValineTimeout = setTimeout(() => {
-                    loadValine();
-                    clearTimeout(loadValineTimeout);
-                }, 1000);
-            } else {
-                window.addEventListener('DOMContentLoaded', loadValine);
-            }
-        </script>
-    </div>
+        }
 
+      }
 
+    }
 
-        
-    
-</div>
+  }
 
-            
-        </div>
-    </div>
-</div>
+}
 
 
                 
