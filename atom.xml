@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://ejyuan.fun/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://ejyuan.fun/"/>
   <updated>2022-06-28T13:18:16.444Z</updated>
-  <id>http://example.com/</id>
+  <id>https://ejyuan.fun/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2022/06/28/hello-world/"/>
-    <id>http://example.com/2022/06/28/hello-world/</id>
+    <link href="https://ejyuan.fun/2022/06/28/hello-world/"/>
+    <id>https://ejyuan.fun/2022/06/28/hello-world/</id>
     <published>2022-06-28T13:18:16.444Z</published>
     <updated>2022-06-28T13:18:16.444Z</updated>
     
