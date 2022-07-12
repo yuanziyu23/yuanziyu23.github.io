@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ejyuan.fun/timeline/index.html</loc>
+    
+    <lastmod>2022-07-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ejyuan.fun/messageboard/index.html</loc>
+    
+    <lastmod>2022-07-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ejyuan.fun/about/index.html</loc>
+    
+    <lastmod>2022-07-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ejyuan.fun/link/index.html</loc>
     
     <lastmod>2022-07-11</lastmod>
@@ -12,33 +39,6 @@
   
   <url>
     <loc>https://ejyuan.fun/myself/index.html</loc>
-    
-    <lastmod>2022-07-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ejyuan.fun/about/index.html</loc>
-    
-    <lastmod>2022-07-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ejyuan.fun/timeline/index.html</loc>
-    
-    <lastmod>2022-07-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ejyuan.fun/messageboard/index.html</loc>
     
     <lastmod>2022-07-10</lastmod>
     
@@ -85,7 +85,7 @@
 
   <url>
     <loc>https://ejyuan.fun/</loc>
-    <lastmod>2022-07-11</lastmod>
+    <lastmod>2022-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

@@ -1,8 +1,8 @@
-https://ejyuan.fun/link/index.html
-https://ejyuan.fun/myself/index.html
-https://ejyuan.fun/about/index.html
 https://ejyuan.fun/timeline/index.html
 https://ejyuan.fun/messageboard/index.html
+https://ejyuan.fun/about/index.html
+https://ejyuan.fun/link/index.html
+https://ejyuan.fun/myself/index.html
 https://ejyuan.fun/categories/index.html
 https://ejyuan.fun/tags/index.html
 https://ejyuan.fun/changelog/index.html
